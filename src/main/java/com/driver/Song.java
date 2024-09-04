@@ -4,16 +4,26 @@ public class Song {
     private String title;
     private int length;
     private int likes;
+    private String titleName;
+    private String mobile;
+
 
     public Song(){
 
     }
 
-    public Song(String title, int length){
+    public Song(String title, int length,String titleName,String mobile){
+        this.mobile=mobile;
         this.title = title;
         this.length = length;
+        this.titleName=titleName;
     }
 
+   public String getMobile(){return mobile;}
+
+    public void setMobile(String mobile){this.mobile=mobile;}
+    public String getTitleName(){return titleName;}
+    public void setTitleName(String titleName){this.titleName=titleName;}
     public String getTitle() {
         return title;
     }
