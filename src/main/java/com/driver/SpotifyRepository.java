@@ -16,6 +16,7 @@ public class SpotifyRepository {
 
     public List<User> users;
     public List<Song> songs;
+    public List<Song> likeSongs;
     public List<Playlist> playlists;
     public List<Album> albums;
     public List<Artist> artists;
@@ -35,6 +36,7 @@ public class SpotifyRepository {
 
         users = new ArrayList<>();
         songs = new ArrayList<>();
+        likeSongs= new ArrayList<>();
         playlists = new ArrayList<>();
         albums = new ArrayList<>();
         artists = new ArrayList<>();
@@ -61,7 +63,7 @@ public class SpotifyRepository {
 
     public Album createAlbum(String title, String artistName) {
         Album album=new Album();
-        Artist artist=new Artist();
+
         album.setTitle(title);
         album.setArtist(artistName);
         albums.add(album);
@@ -113,7 +115,8 @@ public class SpotifyRepository {
         Song song=new Song();
         song.setTitle(songTitle);
         song.setMobile(mobile);
-        songs.add(song);
+        song.setLikes(1);
+        likeSongs.add(song);
 
         return song;
 

@@ -45,6 +45,6 @@ public class Song {
     }
 
     public void setLikes(int likes) {
-        this.likes = likes;
+        this.likes = likes+1;
     }
 }
