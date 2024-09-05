@@ -128,6 +128,6 @@ public class SpotifyRepository {
 
     public String mostPopularSong() {
 
-        return "Most popular song";
+        return "Most popular songs";
     }
 }
